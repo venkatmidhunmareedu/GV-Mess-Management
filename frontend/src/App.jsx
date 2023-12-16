@@ -1,22 +1,24 @@
 import { useState } from 'react'
 import Layout from './components/Layout'
-import { BrowserRouter , Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import Notifications from './pages/Notifications';
 
 
 function App() {
 
-  
+
 
   return (
     <>
-      <Layout>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Layout>
           <Routes>
-            <Route path="/"  element={<Home/>} /> 
+            <Route path="/" element={<Home />} />
+            <Route path="/notifications" element={<Notifications />} />
           </Routes>
-        </BrowserRouter>
-      </Layout>
+        </Layout>
+      </BrowserRouter>
     </>
   )
 }
